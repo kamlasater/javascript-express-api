@@ -9,6 +9,9 @@ api.get("/hello", (req, res) => {
   console.log(req)
   return res.status(200).send({ message: "Hello from the public api!" });
 });
+api.get("/echo", (req, res) => {
+  return res.json(JSON.stringify(process.env));
+});
 
 api.get("/greet/:name", (req, res) => {
   const { name } = req.params;
