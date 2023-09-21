@@ -6,6 +6,7 @@ const app = express();
 const api = Router();
 
 api.get("/hello", (req, res) => {
+  console.log(req)
   return res.status(200).send({ message: "Hello from the public api!" });
 });
 
